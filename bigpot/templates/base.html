@@ -39,6 +39,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('community') }}">Community</a>
                         </li>
+                        {% if session.logged_in %}
+                            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                        {% else %}
+                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                        {% endif %}
+                        </li>
                     </ul>
                 </div>
             </div>
