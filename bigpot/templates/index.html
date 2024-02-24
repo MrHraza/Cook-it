@@ -4,9 +4,9 @@
 
 
 <div class="page-section clearfix">
-  <div class="container">
+  <div class="container mt-3 mb-3">
     <div class="row mx-auto">
-      <h1 class="mt-4 mt-3">Easy Desserts</h1>
+      <h1 class="mt-4 mb-4">Easy Desserts</h1>
     
     </div>
   </div>
@@ -34,15 +34,15 @@
           
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
-                  <div class="container px-2" style="display: flex;" >
-                    <div>
-                      <h5><strong>Ingredients:</strong></h5>
+                  <div class="container mb-3 px-2" style="display: flex;" >
+                    <div class="pt-3 pr-2 pl-2 mr-4" style="width: 450px;">
+                      <h5 class="mb-4"><strong>Ingredients:</strong></h5>
                       {% for ingredient in recipe.ingredients %}
                           <li style="list-style: none; text-indent: 4%; font-size: small;" class="mb-2">{{ ingredient }}</li>
                       {% endfor %}
                     </div>
-                    <div class="m-2 px-5">
-                      <h5><strong>Method:</strong></h5>
+                    <div class="pt-3">
+                      <h5 class="mb-4"><strong>Method:</strong></h5>
                       {% for step in recipe.steps %}
                           <li style="list-style:decimal; font-size: small;" class="mb-2">{{ step }}</li>
                       {% endfor %}
