@@ -5,6 +5,32 @@
         "image":"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-chocolate-molten-cakes-37a25eb.jpg?quality=90&webp=true&resize=375,341",
         "prep":"15mins",
         "cook":"20mins"
-    }
+    },
     
+    {
+        "name":"Pistachio tiramisu",
+        "description": "Delight guests with a pistachio twist on tiramisu, with a pistachio cream filling and pistachio topping. It's a perfect dessert for a dinner party.",
+        "image":"https://images.immediate.co.uk/production/volatile/sites/30/2023/10/Pistachio-tiramisu-6d3d0da.jpg",
+        "prep":"35mins",
+        "cook":"50mins",
+        "ingredients":["sdajlkf", "sakflsj"],
+        "method":["dsaf", "saf"]
+    },
+
+    {
+        "name":"Salted chocolate & hazelnut brownies",
+        "description": "Chocolate hazelnut spread ensures these moreish brownies have a fudgy centre. Flecked with pecans and sea salt.",
+        "image":"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/salted-chocolate-hazelnut-brownies-250693d.jpg",
+        "prep":"20mins",
+        "cook":"35mins"
+    },
+
+    {
+        "name":"Floating islands",
+        "description": "Whip up some floating islands at your next dinner party, the retro-cool French dessert featuring crème anglaise, meringue and caramel.",
+        "image":"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/floating-island-3a8b98b.jpg?quality=90&webp=true&resize=375,341",
+        "prep":"15mins",
+        "cook":"30mins"
+    }
+
 ]
