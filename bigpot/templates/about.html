@@ -1,22 +1,61 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>{{ page_title }}</h2>
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="mt-5 mb-4">{{ page_title }}</h2>
+                <p>
+                    Welcome to Cook It, your ultimate destination for exploring the sweet side of life! <br> Whether you're a newcomer to
+                    the world of desserts or a seasoned baker, Cook It is here to inspire you with delightful recipes and helpful tips.
 
-    <p>
-        Welcome to Cook It, your ultimate destination for exploring the sweet side of life! Whether you're a newcomer to
-        the world of desserts or a seasoned baker, Cook It is here to inspire you with delightful recipes and helpful tips.
+                    At Cook It, we're passionate about all things sweet. From decadent cakes to indulgent cookies and everything in
+                    between, our goal is to make dessert-making fun, approachable, and rewarding for everyone.
 
-        At Cook It, we're passionate about all things sweet. From decadent cakes to indulgent cookies and everything in
-        between, our goal is to make dessert-making fun, approachable, and rewarding for everyone.
+                    Discover a treasure trove of dessert recipes, each carefully crafted to satisfy your sweet cravings and ignite your
+                    creativity in the kitchen. Whether you're celebrating a special occasion or simply treating yourself to a sweet
+                    treat, Cook It has something for every dessert lover.
 
-        Discover a treasure trove of dessert recipes, each carefully crafted to satisfy your sweet cravings and ignite your
-        creativity in the kitchen. Whether you're celebrating a special occasion or simply treating yourself to a sweet
-        treat, Cook It has something for every dessert lover.
+                    Join our community of fellow dessert enthusiasts, share your baking adventures, and let's embark on a delicious
+                    journey together. Get ready to indulge your sweet tooth and unleash your inner pastry chef and just<strong> Cook It!</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        Join our community of fellow dessert enthusiasts, share your baking adventures, and let's embark on a delicious
-        journey together. Get ready to indulge your sweet tooth and unleash your inner pastry chef and just<strong> Cook It!</strong>
-    </p>
-
+<!-- Team Section -->
+<hr>
+<section class="mt-5 px-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mt-5 mb-5">Meet Our Team</h2>
+            
+        <div class="row">
+            <div class="col-md-4">
+                <div style="text-align: center;">
+                    <img style="height: 150px; width: 150px;" src="https://media.istockphoto.com/id/992952572/photo/portrait-of-an-elderly-smiling-man.jpg" alt="Team Member">
+                    <h3 class="mt-3">John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div style="text-align: center;">
+                    <img style="height: 150px; width: 150px;" src="https://media.istockphoto.com/id/157530431/photo/senior-man-portrait-on-black-background.jpg" alt="Team Member">
+                    <h3 class="mt-3">Mike Johnson</h3>
+                    <p>Marketing Manager</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div style="text-align: center;">
+                    <img style="height: 150px; width: 150px;" src="https://images.freeimages.com/images/large-previews/092/marks-of-time-1431882.jpg" alt="Team Member">
+                    <h3 class="mt-3">Jane Smith</h3>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
 
 {% endblock %}
