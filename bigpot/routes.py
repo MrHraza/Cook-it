@@ -15,8 +15,10 @@ def index():
 def about():
     return render_template("about.html", page_title='About Us')
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        flash("Thank you, we have received your message. A member of our team will reach out to you within 24 hours.")
     return render_template("contact.html", page_title='Contact Us')
 
 @app.route("/community")
