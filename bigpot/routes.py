@@ -3,6 +3,7 @@ import json
 from bigpot import app, db
 from flask import render_template, session, redirect, request, flash, url_for
 
+comments = []
 
 @app.route("/")
 def index():
@@ -23,16 +24,36 @@ def contact():
 
 @app.route("/community")
 def community():
-    return render_template("community.html", page_title='Community')
 
+    return render_template("community.html", page_title='Community', comments=comments)
+
+@app.route('/submit-comment', methods=['POST'])
+def submit_comment():
+    name = request.form['name']
+    comment = request.form['comment']
+    comments.append({'name': name, 'comment': comment})
+    return redirect(url_for('community'))
+
+@app.route('/edit-comment', methods=['POST'])
+def edit_comment():
+    comment_id = int(request.form['comment_id'])
+    edited_comment = request.form['edited_comment']
+    comments[comment_id - 1]['comment'] = edited_comment
+    return redirect(url_for('community'))
+
+@app.route('/delete-comment', methods=['POST'])
+def delete_comment():
+    comment_id = int(request.form['comment_id'])
+    del comments[comment_id - 1]
+    return redirect(url_for('community'))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-        # Replace the following line with your user authentication logic
-        if username == "admin" and password == "secret":
+        
+        if username == "admin" and password == "password":
             session['logged_in'] = True
             return redirect(url_for("index"))
         else:
