@@ -1,6 +1,6 @@
 import os
 import json
-from bigpot import app, db
+from bigpot import app
 from flask import render_template, session, redirect, request, flash, url_for
 
 comments = []
@@ -46,21 +46,3 @@ def delete_comment():
     comment_id = int(request.form['comment_id'])
     del comments[comment_id - 1]
     return redirect(url_for('community'))
-
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        username = request.form["username"]
-        password = request.form["password"]
-        
-        if username == "admin" and password == "password":
-            session['logged_in'] = True
-            return redirect(url_for("index"))
-        else:
-            flash("Invalid credentials", "danger")
-    return render_template("login.html")
-
-@app.route("/logout")
-def logout():
-    session.pop('logged_in', None)
-    return redirect(url_for("index"))
