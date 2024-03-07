@@ -3,6 +3,8 @@ import json
 from bigpot import app
 from flask import render_template, session, redirect, request, flash, url_for
 
+
+
 comments = []
 
 @app.route("/")
