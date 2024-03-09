@@ -1,110 +1,524 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<p align="center"><img src="https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/favicon/android-chrome-512x512.png"/></p>
 
-Welcome Husnain Raza,
+# Cook It
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<br>
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+*"Cook it" is a vibrant online hub dedicated to dessert cooks. With a diverse range of dessert recipes, culinary tips, and a welcoming community, "Cook it" provides an engaging platform for anyone passionate about baking and sweet treats.*
 
-## Gitpod Reminders
+<br>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
 
-`python3 -m http.server`
+<br>
 
-A blue button should appear to click: _Make Public_,
+- [Project Overview](#project-overview)
+- [Live Site](#live-site)
+- [Repository](#repository)
+- [Author](#author)
+- [Target Audience](#target-audience)
+- [Project Goals](#project-goals)
+- [User Stories](#user-stories)
+- [Developer](#developer)
+- [Design choices](#design-choices)
+- [Wireframes](#wireframes)
+- [Features](#features)
+- [Interactive Design Elements](#interactive-design-elements)
+- [Implemented features](#implemented-features)
+- [Future features](#future-features)
+- [Version Control](#version-control)
+- [Testing](#testing)
+- [Accessibility Testing](#accessibility-testing)
+- [Examples of Responsive design](#examples-of-responsive-design)
+- [Defects list](#defects-list)
+- [Outstanding defects](#outstanding-defects)
+- [Technologies used](#technologies-used)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Content and Media](#content-and-media)
+- [Acknowledgements](#acknowledgements)
 
-Another blue button should appear to click: _Open Browser_.
+<br>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Project Overview
 
-A blue button should appear to click: _Make Public_,
+<br>
 
-Another blue button should appear to click: _Open Browser_.
+![cook it website display](images/responsiveui.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+"Cook it" is aimed at dessert enthusiasts of all skill levels, from amateur home cooks to seasoned bakers. Whether you're looking to discover new dessert recipes, share your own culinary creations, engage with a vibrant community of like-minded individuals, or simply indulge your sweet tooth, "Cook it" provides a welcoming and inclusive platform for everyone passionate about desserts
 
-To log into the Heroku toolbelt CLI:
+<br>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Live Site
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- https://cook-it-b943d3c1ddf0.herokuapp.com/
 
-------
+<br>
 
-## Release History
+## Repository
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- https://github.com/MrHraza/Cook-it
 
-**September 20 2023:** Update Python version to 3.9.17.
+<br>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Author
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Developer  -  *Husnain Raza*
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<br>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Target Audience
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<br>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+*   **Dessert Enthusiasts:** Individuals who have a passion for desserts and enjoy exploring new recipes, techniques, and flavor combinations.
+    
+*   **Home Cooks:** People who love to bake and create delicious desserts in the comfort of their own kitchens, ranging from beginners to experienced home cooks.
+    
+*   **Food Bloggers and Influencers:** Content creators who specialize in sharing food-related content, including dessert recipes, cooking tutorials, and culinary tips.
+    
+*   **Culinary Enthusiasts:** Individuals who have a general interest in cooking and baking and are eager to expand their culinary repertoire with sweet treats.
+    
+*   **Community-Minded Individuals:** People who value online communities and enjoy engaging with others who share similar interests, such as exchanging recipe ideas, providing feedback, and participating in discussions about desserts.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+  
+<br>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Project Goals
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+1. **Showcase Skills:** Demonstrate skills using coding languages; html, css, javascript, python, flask, jinja.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+2. **User-Friendly Design:** Create an appealing website layout that ensures easy navigation for visitors, allowing them to access information effortlessly.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+3. **Professional Presentation:** Craft a professional online presence for Husnain, incorporating a clean design, well-organized content, and easy-to-read sections, such as about me, and experience and referneces.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+4. **Mobile Responsiveness:** Ensure the website is responsive across various devices, including smartphones, tablets, and desktops, optimizing the user experience for all visitors.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+5. **Call-to-Action (CTA):** Include clear call-to-action elements, such as a contact form or buttons and prompting visitors to engage further.
+   
+<br>
 
-------
+## User Stories
 
-## FAQ about the uptime script
+<br>
 
-**Why have you added this script?**
+Create a website that allows people to combine their passion for baking with their desire to connect with others, share knowledge and expertise, and potentially pursue entrepreneurial opportunities in the culinary/food industry.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<br>
 
-**How will this affect me?**
+## Developer
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<br>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+As a Developer I want to push myself and demonstrate my ability with different coding languages in combination.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<br>
 
-**So….?**
+## Design choices
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<br>
 
-**Can I opt out?**
+#### Colours
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+In this project, the color palette, I chose, consisting of black, white, light grey, and dark grey evokes a sleek, modern, and sophisticated aesthetic. 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+This combination often conveys a sense of professionalism, elegance, and minimalism. 
 
-**Anything more?**
+It may also elude to a theme of sophistication and refinement, appealing to users who appreciate clean and contemporary design. 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Additionally, it can create a sense of balance and clarity, allowing the *focus* to remain on the content, whether it's showcasing mouthwatering dessert images or providing insightful baking tips.
 
----
+<br>
 
-Happy coding!
+#### Typography
+
+I used two fonts on this website for their combined effect; Lora and Times New Roman.
+
+*   **Lora:** This is a serif font with a modern twist. Its graceful curves and balanced proportions provide a touch of sophistication while maintaining readability. Lora's versatility makes it suitable for both body text and headings.
+    
+*   **Times New Roman:** This is a well-known serif font that exudes tradition and professionalism. Its clean lines and distinctive letterforms make it highly legible, especially in longer passages of text. Times New Roman is often associated with formal documents and publications, giving the website a polished and authoritative feel.
+
+Thus, by combining Lora and Times New Roman, one can create a harmonious typographic palette that enhances the overall visual appeal. Lora adds a contemporary flair, while Times New Roman brings a sense of familiarity and credibility, resulting in a refined and inviting user experience.
+
+<br>
+
+#### Imagery
+
+Four images in total of the finished dessert of the given recipe can be seen on the website.
+
+<br>
+
+#### Site Structure
+
+I have opted for a multi-page website as this offers flexibility, organization, and scalability, making it an effective platform for "Cook it" to showcase its diverse range of dessert recipes, culinary resources, and community engagement features to its audience.
+
+<br>
+
+## Wireframes
+
+<br>
+
+- desktop > index.html
+
+https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/index.html-computer.jpg
+
+- tablet > index.html
+
+https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/index.html-tablet.jpg
+
+- mobile > index.html
+
+https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/index.html-tablet.jpg
+
+- all types > 404.html
+
+https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/page-not-found.jpg
+
+<br>
+
+## Features
+
+<br>
+
+From the user stories I have understood that what the client requires is a website that showcases the following:
+
+*Clean and Intuitive Design:*
+- Visually appealing layout with adequate white space. Easy-to-read fonts and appropriate font sizes. Consistent color scheme that complements the content.
+
+*Clear Navigation:* 
+- Intuitive menu or navigation bar for easy access to different pages.
+  
+*Different pages:* 
+- Namely; About, contact, community/forum.
+
+*Visual Enhancements:*
+- High-quality images, that are relevant and add value.
+  
+*Mobile Responsiveness:*
+- Optimized for various devices, ensuring a seamless experience on mobile.
+  
+*Social Media Integration:*
+- Links to relevant social media (Twitter, facebook, Instagram etc.).
+
+*Call-to-Action (CTA):*
+- A clear CTA for users i.e contact form.
+
+<br>
+
+## Interactive Design Elements
+
+<br>
+
+**menu**  
+- Hovering over a menu item *subtly* (see 'contact us') hightlights the item.
+
+![menu](images/menu.png)
+
+
+**Buttons** 
+- Working/linked buttons are used on the website (see 'edit' or 'delete' on the community page).
+
+![buttons](images/buttons.png)
+
+
+**Contact form**
+- This is a working contact form that is connected to the clients Gmail account allowing him to respond to messages.
+
+![contact form](images/contactform.png)
+
+Then sent.
+
+![message sent](images/messagesent.png)
+
+
+**Social links**
+- Cook it socials can be found here, hovering over twitter to highlight.
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/7dde1010-affd-47c3-b078-40cd1f39f653)
+
+<br>
+
+## Implemented features
+
+<br>
+
+**header**
+- This contains a navigation element in the form of a menu, when using on a tablet or a mobile device this changes to a drop-down menu.
+  
+**Easy desserts section on homepage**
+- Features an accordian, this dropped-down segment shows the recipe of the dessert.
+  
+**Contact page**
+- Features a contact form.
+  
+**Community page**
+- Features a working comments section, where comments can be edited or deleted.
+  
+**footer with socials.**
+- Social links to website's social media platform.
+
+<br>
+
+## Future features
+
+<br>
+
+1. login/loggout, users have their own accounts.
+2. enhanced forum, for a better community experience. Users could create threads and sub-topics.
+3. regular dessert recipe updates, more recipes.
+4. Industry recommendations, recommended tools to use. i.e cooking utensils.
+5. video tutorials, show users visually how to make things/tips and tricks.
+6. Newsletters, for extra updates.
+
+<br>
+
+## Version Control
+
+<br>
+
+I am definitly not happy with this project. I absolutely feel I had more to offer I had many great thoughts on how to improve my intial idea for the project. However a few of the final lessons on this part of the course were taught too fast which meant I had to review them several times. I found it was taught at 100mph (as did every student I found on slack!). Furthermore close to the deadline my computer was affected by a virus, which didn't let me start up my computer. I bought a new laptop to continue my project with a short amount of time remaining. I resigned to cut off the inclusion of a database and tried to refine and polish the code as best that I know. I have also tried to keep up with regular commitments. 
+
+<br>
+
+## Testing
+
+### Validation html 
+
+- index.html
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/c0c134d8-1a9f-45a4-9fad-2f901198e077)
+
+- page-not-found.html
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/f7b54b6c-eacf-4c22-9e4c-59045967f8b3)
+
+
+### Validation css
+
+- index-style.css
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/79f25994-615a-4a1e-a405-71ed0b3cfc47)
+
+
+### Validation js
+
+- index.js
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/b99beba9-4d55-42ab-92a8-d2c13d3cd00f)
+
+errors: 'emailjs' < the api i used, 'sendMail' < this was returned from the function called once the 'send message' was clicked.
+
+- page-not-found.js
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/fda80e67-dbaa-457c-9d58-d32291ff5935)
+
+errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') < i didn't know what this meant.
+
+<br>
+
+## Accessibility Testing
+
+#### Colour contrast accessibility testing
+
+<br>
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/a878cc3f-6b01-40b3-b17c-23a55f036e00)
+
+<br>
+
+#### Lighthouse
+
+<br>
+
+- page-not-found.html (desktop)
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/dc0a3858-91d2-4c91-be3e-0c602f9b3e39)
+
+- page-not-found.html (mobile)
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/58c3cce6-7816-4d35-9680-e9cacdcd37e0)
+
+- index.html (desktop)
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/9ac92137-eed4-4608-9cf4-9d7daa8d1525)
+
+- index.html (mobile)
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/6a6cb00e-03ea-44cb-a0e2-65e18f80251a)
+
+<br>
+
+## Examples of Responsive design
+
+<br>
+
+- laptop
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/28423de5-9305-4961-9461-89594c109e9d)
+
+- Ipad Air
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/69a020f1-40e8-410e-8ca4-ebb55cb8432f)
+
+- ipad mini
+
+*menu has been opened*
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/0e3fbe8d-33d5-4654-89a0-828a2a350c68)
+
+- iphone 14 pro max
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/8eb51f1c-99e6-43f6-abf4-52c509c24ada)
+
+- samsung galaxy s20 ultra
+
+![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/4d8e98bb-8e62-4e40-a1a7-6a0c728ae62f)
+
+
+<br>
+
+## Defects list
+
+<br>
+
+*On smaller screens the layout/font size could be smaller and better organised, for a more user friendly experience.
+
+<br>
+
+## Technologies used
+
+#### API
+
+- Emailjs
+
+#### Programming Languages
+
+<br>
+
+- CSS 
+- HTML 
+- JS 
+- Markdown
+
+<br>
+
+#### Frameworks and Extensions
+
+<br>
+
+- Bootstrap 4.2.1
+
+<br>
+
+#### Icons
+
+<br>
+
+- FontAwesome 4.7
+
+<br>
+
+#### Tools
+
+<br>
+
+- Github
+- Gitpod
+- Visual Studio
+- Pen and paper
+- Internet
+- Markdown table of contents generator
+- Favicon
+
+<br>
+
+## Deployment
+
+#### Follow the steps to deploy on Github pages. 
+
+1. In your repository, click on 'settings' in the navigation bar.
+   
+   
+![image](https://github.com/MrHraza/Merci-France/assets/136586198/cb3856e3-8c91-426a-9b18-9469cee122a2)
+
+
+2. In the side menu, on the settings page, click pages (highlighted).
+   
+
+![image](https://github.com/MrHraza/Merci-France/assets/136586198/087224aa-93fc-4fbd-9342-26c21846cb9e)
+
+
+3. Select that which you want to deploy. (main)
+   
+
+![image](https://github.com/MrHraza/Merci-France/assets/136586198/aeb717cf-123c-478e-be05-2f9d5527e518)
+
+
+4. Save and deploy options are then available to click.
+5. You can find a link to your deployed website through 'Settings > Pages' or by clicking 'Environments' on the right-hand side of your repository page. 
+
+<br>
+
+## Credits
+
+<br>
+
+- Code Institute Interactive frontend development Lessons
+- Code Institutes Resume project
+
+<br>
+
+## Content and Media
+
+#### The following websites were visited for inspiration/ideas;
+
+<br>
+
+- https://fonts.google.com/
+
+<br>
+
+#### Icons
+
+<br>
+
+- https://fontawesome.com/v4/icons/
+
+<br>
+
+#### All images were taken from;
+
+<br>
+
+- www.pexels.com - images on the website.
+- www.pngegg.com - Favicon "coding brackets"
+
+<br>
+
+#### Code related ideas;
+
+<br>
+
+- https://codepen.io
+- Code Institutes Rosie Odenkirk resume project
+- https://www.w3schools.com/
+
+<br>
+
+## Acknowledgements
+- https://beautifytools.com/javascript-validator.php
+- CodeInstitute template
+- **Malia Havlicek - mentor**
+- Chrome Developer Tools
+- https://color.a11y.com/
+- https://www.w3schools.com/
+- https://slack.com/
+- https://ui.dev/amiresponsive
+- https://jigsaw.w3.org/css-validator/
+- https://validator.w3.org/
+- Lighthouse
+- Windows screen reader
+
