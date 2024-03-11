@@ -21,14 +21,14 @@
             <div class="card">
               <div class="card-header" id="headingOne" >
                 <h5 class="mb-0" style="display: flex; align-items: center;">
-                  <img style="float: left; max-width: 350px;" class="mr-3" src="{{ recipe.image }}" alt="Dessert Image">
-                  <div>
-                    <button style="font-size:large;letter-spacing: 3px;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      {{ recipe.name }}
-                    </button>
-                    <p style="font-size: medium;">{{ recipe.description }} </p>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i><p style="font-size: small; list-style: none;"><span>Prep: {{ recipe.prep }} & Cook: {{ recipe.cook }}</span></p>
-                  </div>
+                <img style="float: left; max-width: 350px;" class="mr-3" src="{{ recipe.image }}" alt="Dessert Image">
+                <div>
+                  <button style="font-size:large;letter-spacing: 3px;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    {{ recipe.name }}
+                  </button>
+                  <p style="font-size: medium;">{{ recipe.description }} </p>
+                  <i class="fa fa-clock-o" aria-hidden="true"></i><p style="font-size: small; list-style: none;"><span>Prep: {{ recipe.prep }} & Cook: {{ recipe.cook }}</span></p>
+                </div>
                 </h5>
               </div>
           
@@ -36,15 +36,15 @@
                 <div class="card-body">
                   <div class="container mb-3 px-2" style="display: flex;" >
                     <div class="pt-3 pr-2 pl-2 mr-4" style="width: 450px;">
-                      <h5 class="mb-4"><strong>Ingredients:</strong></h5>
+                    <h5 class="mb-4"><strong>Ingredients:</strong></h5>
                       {% for ingredient in recipe.ingredients %}
-                          <li style="list-style: none; text-indent: 4%; font-size: small;" class="mb-2">{{ ingredient }}</li>
+                        <li style="list-style: none; text-indent: 4%; font-size: small;" class="mb-2">{{ ingredient }}</li>
                       {% endfor %}
                     </div>
                     <div class="pt-3">
-                      <h5 class="mb-4"><strong>Method:</strong></h5>
+                    <h5 class="mb-4"><strong>Method:</strong></h5>
                       {% for step in recipe.steps %}
-                          <li style="list-style:decimal; font-size: small;" class="mb-2">{{ step }}</li>
+                        <li style="list-style:decimal; font-size: small;" class="mb-2">{{ step }}</li>
                       {% endfor %}
                     </div>
                   </div>
@@ -56,7 +56,7 @@
         </div>
     </div>
 </section>
-<hr>
+<hr class="mt-5">
 <section class="page-section bg-light">
     <div class="container">
         <div class="row">

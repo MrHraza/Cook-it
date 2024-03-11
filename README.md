@@ -1,4 +1,7 @@
-<p align="center"><img src="https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/favicon/android-chrome-512x512.png"/></p>
+<p align="center"><img src="bigpot/static/favicon/android-chrome-512x512.png"/></p>
+
+<br>
+<br>
 
 # Cook It
 
@@ -44,7 +47,7 @@
 
 <br>
 
-![cook it website display](images/responsiveui.png)
+![cook it website display](bigpot/static/images/responsiveui.png)
 
 "Cook it" is aimed at dessert enthusiasts of all skill levels, from amateur home cooks to seasoned bakers. Whether you're looking to discover new dessert recipes, share your own culinary creations, engage with a vibrant community of like-minded individuals, or simply indulge your sweet tooth, "Cook it" provides a welcoming and inclusive platform for everyone passionate about desserts
 
@@ -215,29 +218,29 @@ From the user stories I have understood that what the client requires is a websi
 **menu**  
 - Hovering over a menu item *subtly* (see 'contact us') hightlights the item.
 
-![menu](images/menu.png)
+![menu](bigpot/static/images/menu.png)
 
 
 **Buttons** 
 - Working/linked buttons are used on the website (see 'edit' or 'delete' on the community page).
 
-![buttons](images/buttons.png)
+![buttons](bigpot/static/images/buttons.png)
 
 
 **Contact form**
 - This is a working contact form that is connected to the clients Gmail account allowing him to respond to messages.
 
-![contact form](images/contactform.png)
+![contact form](bigpot/static/images/contactform.png)
 
 Then sent.
 
-![message sent](images/messagesent.png)
+![message sent](bigpot/static/images/messagesent.png)
 
 
 **Social links**
 - Cook it socials can be found here, hovering over twitter to highlight.
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/7dde1010-affd-47c3-b078-40cd1f39f653)
+![social links](bigpot/static/images/sociallinks.png)
 
 <br>
 
@@ -287,35 +290,20 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 
 ### Validation html 
 
-- index.html
-
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/c0c134d8-1a9f-45a4-9fad-2f901198e077)
-
-- page-not-found.html
-
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/f7b54b6c-eacf-4c22-9e4c-59045967f8b3)
-
+- I Cannot run a validation on my html documents because they are mixed with flask and jinja code and throw errors.
 
 ### Validation css
 
-- index-style.css
+- cookit.css
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/79f25994-615a-4a1e-a405-71ed0b3cfc47)
+![css validation](bigpot/static/images/cookitcssvalid.png)
 
 
 ### Validation js
 
-- index.js
+- comments.js
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/b99beba9-4d55-42ab-92a8-d2c13d3cd00f)
-
-errors: 'emailjs' < the api i used, 'sendMail' < this was returned from the function called once the 'send message' was clicked.
-
-- page-not-found.js
-
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/fda80e67-dbaa-457c-9d58-d32291ff5935)
-
-errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') < i didn't know what this meant.
+![Js validation](bigpot/static/images/commentsvalid.png)
 
 <br>
 
@@ -325,7 +313,7 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 <br>
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/a878cc3f-6b01-40b3-b17c-23a55f036e00)
+![colour test](bigpot/static/images/cookitcolourtest.png)
 
 <br>
 
@@ -333,21 +321,47 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 <br>
 
-- page-not-found.html (desktop)
+- index.html 
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/dc0a3858-91d2-4c91-be3e-0c602f9b3e39)
+(desktop) 
 
-- page-not-found.html (mobile)
+![lighthouse index](bigpot/static/images/lighthouseindex.png)
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/58c3cce6-7816-4d35-9680-e9cacdcd37e0)
+(mobile)
 
-- index.html (desktop)
+![lighthouse index2](bigpot/static/images/lighthouseindex2.png)
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/9ac92137-eed4-4608-9cf4-9d7daa8d1525)
+- about.html 
 
-- index.html (mobile)
+(desktop) 
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/6a6cb00e-03ea-44cb-a0e2-65e18f80251a)
+![lighthouse about](bigpot/static/images/lighthouseabout.png)
+
+(mobile)
+
+![lighthouse about2](bigpot/static/images/lighthouseabout2.png)
+
+- contact.html 
+
+(desktop) 
+
+![lighthouse contact](bigpot/static/images/lighthousecontact.png)
+
+(mobile)
+
+![lighthouse contact2](bigpot/static/images/lighthousecontact2.png)
+
+- community.html 
+
+(desktop) 
+
+![lighthouse community](bigpot/static/images/lighthousecommunity.png)
+
+(mobile)
+
+![lighthouse community2](bigpot/static/images/lighthousecommunity2.png)
+
+
 
 <br>
 
@@ -357,25 +371,25 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 - laptop
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/28423de5-9305-4961-9461-89594c109e9d)
+![laptop view](bigpot/static/images/laptopview.png)
 
 - Ipad Air
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/69a020f1-40e8-410e-8ca4-ebb55cb8432f)
+![ipad air view](bigpot/static/images/ipadairview.png)
 
 - ipad mini
 
 *menu has been opened*
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/0e3fbe8d-33d5-4654-89a0-828a2a350c68)
+![ipad mini view](bigpot/static/images/ipadminiview.png)
 
 - iphone 14 pro max
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/8eb51f1c-99e6-43f6-abf4-52c509c24ada)
+![iphone 14 pro max](bigpot/static/images/iphoneview.png)
 
 - samsung galaxy s20 ultra
 
-![image](https://github.com/MrHraza/Husnain-Raza-CV/assets/136586198/4d8e98bb-8e62-4e40-a1a7-6a0c728ae62f)
+![samsung galaxy s20 ultra](bigpot/static/images/samsungs20ultra.png)
 
 
 <br>
@@ -384,15 +398,13 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 <br>
 
-*On smaller screens the layout/font size could be smaller and better organised, for a more user friendly experience.
+*On smaller screens the layout could do with some more organising, for a more user friendly experience.
+*Also the accordian on the homepage, on smaller screens could be better.
+*NOT a defect but the login page is not coded. Used only as a future feature.
 
 <br>
 
 ## Technologies used
-
-#### API
-
-- Emailjs
 
 #### Programming Languages
 
@@ -400,6 +412,9 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 - CSS 
 - HTML 
+- Flask
+- Jinja
+- python
 - JS 
 - Markdown
 
@@ -409,7 +424,7 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 <br>
 
-- Bootstrap 4.2.1
+- Bootstrap 4.7.0
 
 <br>
 
@@ -439,26 +454,25 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 #### Follow the steps to deploy on Github pages. 
 
-1. In your repository, click on 'settings' in the navigation bar.
+1. From working in gitpod or anycoding space, create both a 'Procfile' and a 'requirements.txt' file.
    
    
-![image](https://github.com/MrHraza/Merci-France/assets/136586198/cb3856e3-8c91-426a-9b18-9469cee122a2)
+![procfile image](bigpot/static/images/procfileimage.png)
 
 
-2. In the side menu, on the settings page, click pages (highlighted).
+2. Open heroku, and create a new app.
+3. Navigate to the 'settings', finding 'Config vars'. Here add your configuration information. see example below.
+
+![config vars](bigpot/static/images/configvars.png)
+
+4. Find the deploy tab on the submenu at the top of the heroku page. Locate the deploy section on the page, either automatic or manual. Select Github and enter the name of your repository. Confirm and connect.
    
-
-![image](https://github.com/MrHraza/Merci-France/assets/136586198/087224aa-93fc-4fbd-9342-26c21846cb9e)
-
-
-3. Select that which you want to deploy. (main)
-   
-
-![image](https://github.com/MrHraza/Merci-France/assets/136586198/aeb717cf-123c-478e-be05-2f9d5527e518)
+![deploy image](bigpot/static/images/deployimage.png)
 
 
-4. Save and deploy options are then available to click.
-5. You can find a link to your deployed website through 'Settings > Pages' or by clicking 'Environments' on the right-hand side of your repository page. 
+5. Scroll to the top of the heroku page and find 'Open app'. If successfully deployed your website should follow.
+
+
 
 <br>
 
@@ -466,8 +480,9 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 <br>
 
-- Code Institute Interactive frontend development Lessons
-- Code Institutes Resume project
+- Code Institute Introduction to flask
+- Code Institutes Relational database walkthrough project
+- Code institute Lessons
 
 <br>
 
@@ -475,11 +490,7 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 #### The following websites were visited for inspiration/ideas;
 
-<br>
-
-- https://fonts.google.com/
-
-<br>
+- https://www.startbootstrap.com/ - used a template layout and adjusted as needed.
 
 #### Icons
 
@@ -493,8 +504,8 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 
 <br>
 
-- www.pexels.com - images on the website.
-- www.pngegg.com - Favicon "coding brackets"
+- www.bbcgoodfood.com
+- www.pngegg.com - Favicon "cook book"
 
 <br>
 
@@ -503,13 +514,13 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 <br>
 
 - https://codepen.io
-- Code Institutes Rosie Odenkirk resume project
+- Code Institutes lessons
 - https://www.w3schools.com/
 
 <br>
 
 ## Acknowledgements
-- https://beautifytools.com/javascript-validator.php
+- https://www.site24x7.com/tools/javascript-validator.html
 - CodeInstitute template
 - **Malia Havlicek - mentor**
 - Chrome Developer Tools
@@ -518,7 +529,6 @@ errors: 'template literal syntax' is only available in ES6 (use 'esversion: 6') 
 - https://slack.com/
 - https://ui.dev/amiresponsive
 - https://jigsaw.w3.org/css-validator/
-- https://validator.w3.org/
 - Lighthouse
 - Windows screen reader
 

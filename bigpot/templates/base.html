@@ -5,14 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Cook It</title>
 
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
+
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/cookit.min.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     </head>
 
@@ -72,32 +78,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                        </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                                </a>
-                            </li>
-                        </ul>
+                        <!-- Social media icons -->
+                        <div class="text-center">
+                            <a aria-label="facebook" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" style="font-size: 20px; padding: 9px;"></i></a>
+                            <a aria-label="twitter" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square" style="font-size: 20px; padding: 9px;"></i></a>
+                            <a aria-label="instagram" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size: 20px; padding: 9px;"></i></a>
+                        </div>
                         <p class="copyright text-muted">Copyright &copy; Cook It <span id="copyright"></span></p>
                     </div>
                 </div>
