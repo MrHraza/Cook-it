@@ -164,21 +164,13 @@ I have opted for a multi-page website as this offers flexibility, organization, 
 
 <br>
 
-- desktop > index.html
+- desktop > general template to follow for all pages
 
-https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/index.html-computer.jpg
+![computerwireframe](bigpot/static/images/computer.jpg)
 
-- tablet > index.html
+- tablet/phone > general template to follow for all pages
 
-https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/index.html-tablet.jpg
-
-- mobile > index.html
-
-https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/index.html-tablet.jpg
-
-- all types > 404.html
-
-https://github.com/MrHraza/Husnain-Raza-CV/blob/main/assets/cv-project/wireframes/page-not-found.jpg
+![phonewireframe](bigpot/static/images/phone.jpg)
 
 <br>
 
