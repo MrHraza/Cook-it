@@ -43,19 +43,7 @@
                 <h2 class="mb-5">Comments:</h2>
                 <ul style="list-style: none;">
                     {% for comment in comments %}
-                        <li class="mb-2" id="comment_{{ loop.index }}">
-                            <strong>{{ comment.name }}</strong>: <span id="comment_text_{{ loop.index }}">{{ comment.comment }}</span>
-                            <button style="float:right;" onclick="deleteComment( {{ loop.index }} )">Delete</button>
-                            <button style="float:right;" onclick="editComment( {{ loop.index }} )">Edit</button>
-                            <form id="edit_form_{{ loop.index }}" action="/edit-comment" method="post" style="display:none;">
-                                <input type="hidden" name="comment_id" value="{{ loop.index }}">
-                                <input type="text" name="edited_comment" value="{{ comment.comment }}">
-                                <button type="submit">Save</button>
-                            </form>
-                            <form id="delete_form_{{ loop.index }}" action="/delete-comment" method="post" style="display:none;">
-                                <input type="hidden" name="comment_id" value="{{ loop.index }}">
-                            </form>
-                        </li>
+                        
                     {% endfor %}
                 </ul>
             </div>

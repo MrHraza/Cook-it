@@ -1,5 +1,7 @@
 blinker==1.7.0
 click==8.1.7
-Flask==3.0.2
+Flask==2.2.5
 itsdangerous==2.1.2
 Werkzeug==3.0.1
+psycopg2
+sqlalchemy==1.4.46

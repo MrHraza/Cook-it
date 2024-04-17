@@ -1,11 +1,11 @@
 import os
 import json
-from bigpot import app
+from bigpot import app, db
 from flask import render_template, session, redirect, request, flash, url_for
+from bigpot.models import Users, Comments
 
 
 
-comments = []
 
 @app.route("/")
 def index():
@@ -26,25 +26,25 @@ def contact():
 
 @app.route("/community")
 def community():
+    return render_template("community.html", page_title='Community')
 
-    return render_template("community.html", page_title='Community', comments=comments)
+@app.route("/login")
+def login():
+    return render_template("login.html", page_title='Login')
 
-@app.route('/submit-comment', methods=['POST'])
-def submit_comment():
-    name = request.form['name']
-    comment = request.form['comment']
-    comments.append({'name': name, 'comment': comment})
-    return redirect(url_for('community'))
+@app.route("/signup")
+def signup():
+    return render_template("signup.html")
 
-@app.route('/edit-comment', methods=['POST'])
-def edit_comment():
-    comment_id = int(request.form['comment_id'])
-    edited_comment = request.form['edited_comment']
-    comments[comment_id - 1]['comment'] = edited_comment
-    return redirect(url_for('community'))
-
-@app.route('/delete-comment', methods=['POST'])
-def delete_comment():
-    comment_id = int(request.form['comment_id'])
-    del comments[comment_id - 1]
-    return redirect(url_for('community'))
+@app.route("/add_user", methods=["GET", "POST"])
+def add_users():
+    if request.method == "POST":
+        user = Users(username=request.form.get("username"))
+        password = Users(password=request.form.get("password"))
+        email = Users(email=request.form.get("email"))
+        db.session.add(user)
+        db.session.add(password)
+        db.session.add(email)
+        db.session.commit()
+        return redirect("{{ url_for('login') }}")
+    return render_template("signup.html")
