@@ -6,15 +6,15 @@ class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(25), unique=True, nullable=False)
     password = db.Column(db.String(25), unique=True, nullable=False)
-    email = db.Column(db.String(25), unique=True, nullable=False)
-    comment = db.relationship("comments", backref="users", lazy=True)
+    email = db.Column(db.String(50), unique=True, nullable=False)
+    #comment = db.relationship("comments", backref="users", lazy=True)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
         return self.username
 
 class Comments(db.Model):
-    # schema for the Task model
+    
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.Text, nullable=False)
     date_posted = db.Column(db.Date)
