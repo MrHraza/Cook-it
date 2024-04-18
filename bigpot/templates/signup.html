@@ -58,13 +58,12 @@
     <div class="login-container">
         <h2>Sign up here</h2>
         <form action="{{ url_for('add_users') }}" method="post">
-            <input type="text" minlength="3" maxlength="25" name="username" placeholder="Username" required>
-            <input type="password" minlength="8" name="password" placeholder="Password" required>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
             <button type="submit">Create new user</button>
         </form>
         <br>
-        
     </div>
 </section>
 

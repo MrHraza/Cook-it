@@ -2,9 +2,8 @@ import os
 import json
 from bigpot import app, db
 from flask import render_template, session, redirect, request, flash, url_for
+from werkzeug.security import check_password_hash
 from bigpot.models import Users, Comments
-
-
 
 
 @app.route("/")
@@ -26,11 +25,36 @@ def contact():
 
 @app.route("/community")
 def community():
+    comments = Comments.query.all()
     return render_template("community.html", page_title='Community')
 
 @app.route("/login")
 def login():
-    return render_template("login.html", page_title='Login')
+    return render_template("login.html")    
+
+@app.route('/login', methods=['POST'])
+def authentication():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        user = Users.query.filter_by(username=username).first()
+        
+        if user:
+            if check_password_hash(user.password, password):
+                session['user_id'] = user.id
+                return redirect(url_for('dashboard'))
+            else:
+                flash('Incorrect password. Please try again.', 'error')
+                return redirect(url_for('login'))
+        else:
+            flash('User not found. Please try again.', 'error')
+            return redirect(url_for('login'))
+
+@app.route("/logout")
+def logout():
+    session.pop('logged_in', None)
+    return redirect(url_for("index"))
 
 @app.route("/signup")
 def signup():
@@ -38,13 +62,30 @@ def signup():
 
 @app.route("/add_user", methods=["GET", "POST"])
 def add_users():
-    if request.method == "POST":
-        user = Users(username=request.form.get("username"))
-        password = Users(password=request.form.get("password"))
-        email = Users(email=request.form.get("email"))
-        db.session.add(user)
-        db.session.add(password)
-        db.session.add(email)
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        email = request.form['email']
+        
+        new_user = Users(username=username, password=password, email=email)
+        db.session.add(new_user)
         db.session.commit()
-        return redirect("{{ url_for('login') }}")
-    return render_template("signup.html")
+
+        return redirect(url_for('login'))
+    return render_template('signup.html')
+
+@app.route('/add_comment', methods=['POST'])
+def add_comment():
+
+    if not current_user :
+        return redirect(url_for('login'))
+
+    comment_text = request.form['comment']
+
+    new_comment = Comments(user_id=current_user.id, comment=comment_text)
+    db.session.add(new_comment)
+    db.session.commit()
+
+    return redirect(url_for('community'))
+
+    

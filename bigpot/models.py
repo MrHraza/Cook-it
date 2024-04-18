@@ -7,10 +7,9 @@ class Users(db.Model):
     username = db.Column(db.String(25), unique=True, nullable=False)
     password = db.Column(db.String(25), unique=True, nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
-    #comment = db.relationship("comments", backref="users", lazy=True)
+    comment = db.relationship("Comments", backref="users", cascade="all, delete", lazy=True)
 
     def __repr__(self):
-        # __repr__ to represent itself in the form of a string
         return self.username
 
 class Comments(db.Model):
