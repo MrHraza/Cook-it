@@ -2,7 +2,8 @@ import os
 import json
 from bigpot import app, db
 from flask import render_template, session, redirect, request, flash, url_for
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
+from sqlalchemy.exc import IntegrityError
 from bigpot.models import Users, Comments
 
 
@@ -37,13 +38,13 @@ def authentication():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        
+    
         user = Users.query.filter_by(username=username).first()
         
         if user:
-            if check_password_hash(user.password, password):
+            if user and check_password_hash(user.password, password):
                 session['user_id'] = user.id
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('index'))
             else:
                 flash('Incorrect password. Please try again.', 'error')
                 return redirect(url_for('login'))
@@ -62,17 +63,27 @@ def signup():
 
 @app.route("/add_user", methods=["GET", "POST"])
 def add_users():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        email = request.form['email']
-        
-        new_user = Users(username=username, password=password, email=email)
-        db.session.add(new_user)
-        db.session.commit()
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        email = request.form["email"]
 
-        return redirect(url_for('login'))
-    return render_template('signup.html')
+        hashed_password = generate_password_hash(password)
+
+        new_user = Users(username=username, password=hashed_password, email=email)
+
+        db.session.add(new_user)
+
+        try:
+            db.session.commit()
+            flash("User created successfully!", "success")
+            return redirect(url_for("login"))
+        except IntegrityError as e:
+            db.session.rollback()
+            error_message = str(e.orig)
+            flash(f"An error occurred: {error_message}", "error")
+
+    return render_template("signup.html")
 
 @app.route('/add_comment', methods=['POST'])
 def add_comment():
