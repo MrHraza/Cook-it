@@ -1,6 +1,3 @@
-greenlet         3.0.3
-itsdangerous     2.1.2
-Mako             1.3.3
 psycopg2         2.9.9
 SQLAlchemy       1.4.46
 Werkzeug         3.0.2
