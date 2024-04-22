@@ -1,14 +1,13 @@
 from bigpot import db
-
+from datetime import datetime
 
 class Users(db.Model):
-    # schema for the users model
+   
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(255), unique=True, nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    comment = db.relationship("Comments", backref="users", cascade="all, delete", lazy=True)
-
+    
     def __repr__(self):
         return self.username
 
@@ -16,9 +15,10 @@ class Comments(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.Text, nullable=False)
-    date_posted = db.Column(db.Date)
-    date_updated = db.Column(db.Date)
+    date_posted = db.Column(db.DateTime, default=datetime.utcnow)
+    date_updated = db.Column(db.DateTime, onupdate=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user = db.relationship("Users", backref="comments")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string

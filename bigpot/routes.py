@@ -3,7 +3,6 @@ import json
 from bigpot import app, db
 from flask import render_template, session, redirect, request, flash, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
-from sqlalchemy.exc import IntegrityError
 from bigpot.models import Users, Comments
 
 
@@ -14,9 +13,13 @@ def index():
         data = json.load(json_data)
     return render_template("index.html", recipies=data)
 
+#about page
+
 @app.route("/about")
 def about():
     return render_template("about.html", page_title='About Us')
+
+#Contact page
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
@@ -24,10 +27,14 @@ def contact():
         flash("Thank you, we have received your message. A member of our team will reach out to you within 24 hours.")
     return render_template("contact.html", page_title='Contact Us')
 
+# community page
+
 @app.route("/community")
 def community():
-    comments = Comments.query.all()
-    return render_template("community.html", page_title='Community')
+    comments = Comments.query.join(Users).all()
+    return render_template("community.html", page_title='Community', comments=comments)
+
+# login/logout
 
 @app.route("/login")
 def login():
@@ -44,6 +51,7 @@ def authentication():
         if user:
             if user and check_password_hash(user.password, password):
                 session['user_id'] = user.id
+                session['logged_in'] = True
                 return redirect(url_for('index'))
             else:
                 flash('Incorrect password. Please try again.', 'error')
@@ -52,10 +60,13 @@ def authentication():
             flash('User not found. Please try again.', 'error')
             return redirect(url_for('login'))
 
-@app.route("/logout")
+@app.route("/logout", methods=["GET", "POST"])
 def logout():
     session.pop('logged_in', None)
+    session.clear()
     return redirect(url_for("index"))
+
+#sign up page
 
 @app.route("/signup")
 def signup():
@@ -78,25 +89,65 @@ def add_users():
             db.session.commit()
             flash("User created successfully!", "success")
             return redirect(url_for("login"))
-        except IntegrityError as e:
+        except Exception as e:
             db.session.rollback()
-            error_message = str(e.orig)
-            flash(f"An error occurred: {error_message}", "error")
+            flash(f"An error occurred: {str(e)}", "error")
 
     return render_template("signup.html")
 
-@app.route('/add_comment', methods=['POST'])
-def add_comment():
+#community functions
 
-    if not current_user :
+@app.route("/add_comment", methods=["POST"])
+def add_comment():
+    if 'user_id' not in session:
+        flash('Please log in to add a comment.', 'error')
         return redirect(url_for('login'))
 
-    comment_text = request.form['comment']
+    user_id = session['user_id']
 
-    new_comment = Comments(user_id=current_user.id, comment=comment_text)
+    comment_text = request.form.get('comment')
+
+    new_comment = Comments(user_id=user_id, comment=comment_text)
     db.session.add(new_comment)
     db.session.commit()
 
+    flash('Comment added successfully!', 'success')
     return redirect(url_for('community'))
 
-    
+@app.route("/delete_comment/<int:comment_id>", methods=["POST"])
+def delete_comment(comment_id):
+    comment = Comments.query.get(comment_id)
+
+    if not comment:
+        flash("Comment not found.", "error")
+        return redirect(url_for("community"))
+
+    try:
+        db.session.delete(comment)
+        db.session.commit()
+        flash("Comment deleted successfully.", "success")
+    except Exception as e:
+        flash(f"An error occurred: {str(e)}", "error")
+
+    return redirect(url_for("community"))
+
+@app.route("/edit_comment/<int:comment_id>", methods=["GET", "POST"])
+def edit_comment(comment_id):
+    comment = Comments.query.get(comment_id)
+    if not comment:
+        flash("Comment not found.", "error")
+        return redirect(url_for("community"))
+
+    if session.get("user_id") != comment.user_id:
+        flash("You can only edit your own comments.", "error")
+        return redirect(url_for("community"))
+
+    if request.method == "POST":
+        new_comment_text = request.form.get("new_comment_text")
+        if new_comment_text:
+            comment.comment = new_comment_text
+            db.session.commit()
+            flash("Comment updated successfully.", "success")
+            return redirect(url_for("community"))
+
+    return render_template("edit_comment.html", comment=comment)
