@@ -54,7 +54,7 @@ def authentication():
                 session['logged_in'] = True
                 return redirect(url_for('index'))
             else:
-                flash('Incorrect password. Please try again.', 'error')
+                flash('Incorrect password. Try again.', 'error')
                 return redirect(url_for('login'))
         else:
             flash('User not found. Please try again.', 'error')
