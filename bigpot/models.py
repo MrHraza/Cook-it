@@ -21,6 +21,5 @@ class Comments(db.Model):
     user = db.relationship("Users", backref="comments")
 
     def __repr__(self):
-        # __repr__ to represent itself in the form of a string
         return "#{0} | User Id: {1} | Comment: {2} | Date posted: {3} | Date updated: {4}".format(self.id, self.user_id, self.comment, self.date_posted, self.date_updated)
 
