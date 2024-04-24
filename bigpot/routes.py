@@ -5,6 +5,7 @@ from flask import render_template, session, redirect, request, flash, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 from bigpot.models import Users, Comments
 
+#index page
 
 @app.route("/")
 def index():
