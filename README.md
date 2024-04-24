@@ -55,7 +55,7 @@
 
 ## Live Site
 
-- https://cook-it-b943d3c1ddf0.herokuapp.com/
+- https://cook-it-31a1cb906548.herokuapp.com/
 
 <br>
 
@@ -248,6 +248,9 @@ Then sent.
   
 **Contact page**
 - Features a contact form.
+
+**User accounts**
+- Sign up, login and leave your recipes/comments.
   
 **Community page**
 - Features a working comments section, where comments can be edited or deleted.
@@ -261,12 +264,11 @@ Then sent.
 
 <br>
 
-1. login/loggout, users have their own accounts.
-2. enhanced forum, for a better community experience. Users could create threads and sub-topics.
-3. regular dessert recipe updates, more recipes.
-4. Industry recommendations, recommended tools to use. i.e cooking utensils.
-5. video tutorials, show users visually how to make things/tips and tricks.
-6. Newsletters, for extra updates.
+1. enhanced forum, for a better community experience. Users could create threads and sub-topics.
+2. regular dessert recipe updates, more recipes.
+3. Industry recommendations, recommended tools to use. i.e cooking utensils.
+4. video tutorials, show users visually how to make things/tips and tricks.
+5. Newsletters, for extra updates.
 
 <br>
 
@@ -290,14 +292,6 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 
 ![css validation](bigpot/static/images/cookitcssvalid.png)
 
-
-### Validation js
-
-- comments.js
-
-![Js validation](bigpot/static/images/commentsvalid.png)
-
-<br>
 
 ## Accessibility Testing
 
@@ -405,6 +399,7 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 - CSS 
 - HTML 
 - Flask
+- SQLAlchemy
 - Jinja
 - python
 - JS 
