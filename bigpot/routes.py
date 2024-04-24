@@ -11,6 +11,8 @@ def index():
     data = []
     with open("data/recipies.json", "r") as json_data:
         data = json.load(json_data)
+    with app.app_context():
+        db.create_all()
     return render_template("index.html", recipies=data)
 
 #about page
