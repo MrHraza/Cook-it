@@ -108,7 +108,10 @@ Developer  -  *Husnain Raza*
 
 <br>
 
-Create a website that allows people to combine their passion for baking with their desire to connect with others, share knowledge and expertise, and potentially pursue entrepreneurial opportunities in the culinary/food industry.
+1. I want to view a list of recipes so that I can explore different deserts.
+2. I want to view the ingredients and method of a recipe so that I can understand how to prepare the dish.
+3. I want to add comments on the Community page when I am logged in so that I can engage with the website and its community.
+
 
 <br>
 
@@ -212,6 +215,10 @@ From the user stories I have understood that what the client requires is a websi
 
 ![menu](bigpot/static/images/menu.png)
 
+- Menu is condensed to a dropdown on smaller screens. (see hamburger icon)
+
+![hamburger-menu](bigpot/static/images/hamburger-menu.png)
+
 
 **Buttons** 
 - Working/linked buttons are used on the website (see 'edit' or 'delete' on the community page).
@@ -233,6 +240,23 @@ Then sent.
 - Cook it socials can be found here, hovering over twitter to highlight.
 
 ![social links](bigpot/static/images/sociallinks.png)
+
+
+**Sign-up/Login**
+- Sign-up form 
+
+![signupform](bigpot/static/images/signupform.png)
+
+![newuser](bigpot/static/images/newuser.png)
+
+- Login form
+
+![loginform](bigpot/static/images/loginform.png)
+
+- once you have logged in, 'login' is replaced with 'logout' on the menu
+
+![logout](bigpot/static/images/logout.png)
+
 
 <br>
 
@@ -264,11 +288,14 @@ Then sent.
 
 <br>
 
-1. enhanced forum, for a better community experience. Users could create threads and sub-topics.
-2. regular dessert recipe updates, more recipes.
+1. A forum, for a better community experience. Users could create threads and sub-topics.
+2. Regular dessert recipe updates, more recipes.
 3. Industry recommendations, recommended tools to use. i.e cooking utensils.
-4. video tutorials, show users visually how to make things/tips and tricks.
-5. Newsletters, for extra updates.
+4. Video tutorials, show users visually how to make things/tips and tricks.
+5. Newsletters.
+6. FULL CRUD and data model for recipes.
+7. workflow for comment approvals so harmful content isn't automatically visible
+8. workflow for recipe submission
 
 <br>
 
@@ -276,7 +303,15 @@ Then sent.
 
 <br>
 
-I am definitly not happy with this project. I absolutely feel I had more to offer I had many great thoughts on how to improve my intial idea for the project. However a few of the final lessons on this part of the course were taught too fast which meant I had to review them several times. I found it was taught at 100mph (as did every student I found on slack!). Furthermore close to the deadline my computer was affected by a virus, which didn't let me start up my computer. I bought a new laptop to continue my project with a short amount of time remaining. I resigned to cut off the inclusion of a database and tried to refine and polish the code as best that I know. I have also tried to keep up with regular commitments. 
+Version control for this project was managed using Git and GitHub. Git was used via the terminal in gitpod.io to commit changes.
+
+#### Commit Habits
+
+Commits were made throughout the development process to ensure that changes were tracked effectively. This approach not only provided a clear history of the project's progression, but also ensured that any changes could be rolled back if necessary.
+
+#### GitHub 
+
+GitHub was used as the remote repository for storing the project's code and resources. It provided a backup of the project and allowed it to be accessed from different locations.
 
 <br>
 
@@ -284,7 +319,7 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 
 ### Validation html 
 
-- I Cannot run a validation on my html documents because they are mixed with flask and jinja code and throw errors.
+- 
 
 ### Validation css
 
@@ -386,7 +421,6 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 
 *On smaller screens the layout could do with some more organising, for a more user friendly experience.
 *Also the accordian on the homepage, on smaller screens could be better.
-*NOT a defect but the login page is not coded. Used only as a future feature.
 
 <br>
 
@@ -439,7 +473,7 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 
 ## Deployment
 
-#### Follow the steps to deploy on Github pages. 
+#### Follow the steps to deploy on Heroku. 
 
 1. From working in gitpod or anycoding space, create both a 'Procfile' and a 'requirements.txt' file.
    
@@ -449,6 +483,8 @@ I am definitly not happy with this project. I absolutely feel I had more to offe
 
 2. Open heroku, and create a new app.
 3. Navigate to the 'settings', finding 'Config vars'. Here add your configuration information. see example below.
+
+**NOTE: THE INFORMATION DISPLAYED IN THE IMAGE BELOW IS AN EXAMPLE AND NOT CORRECT**
 
 ![config vars](bigpot/static/images/configvars.png)
 

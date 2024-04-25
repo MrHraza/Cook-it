@@ -1,76 +1,81 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
 <div class="page-section clearfix mt-5">
   <div class="container mt-5 mb-5">
     <div class="row mx-auto">
       <h1 class="mt-5">Easy Desserts</h1>
-    
     </div>
   </div>
 </div>
 
 <section class="page-section clearfix mt-5">
-    <div class="container">
-        <div id="accordion">
+  <div class="container">
+    <div id="accordion">
 
-          {% for recipe in recipies %}
+      {% for recipe in recipies %}
 
-            <div class="card">
-              <div class="card-header" id="headingOne" >
-                <h5 class="mb-0" style="display: flex; align-items: center;">
+        <div class="card">
+          <div class="card-header" id="heading{{ loop.index }}">
+              <div style="display: flex; align-items: center;">
                 <img style="float: left; max-width: 350px;" class="mr-3" src="{{ recipe.image }}" alt="Dessert Image">
                 <div>
-                  <button style="font-size:large;letter-spacing: 3px;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <button style="font-size: large; letter-spacing: 3px;" class="btn btn-dark" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
                     {{ recipe.name }}
                   </button>
-                  <p style="font-size: medium;">{{ recipe.description }} </p>
-                  <i class="fa fa-clock-o" aria-hidden="true"></i><p style="font-size: small; list-style: none;"><span>Prep: {{ recipe.prep }} & Cook: {{ recipe.cook }}</span></p>
+                  <p style="font-size: medium;">{{ recipe.description }}</p>
+                  <p style="font-size: small;">Prep: {{ recipe.prep }} & Cook: {{ recipe.cook }}</p>
                 </div>
-                </h5>
               </div>
+          </div>
+        </div>
           
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="container mb-3 px-2" style="display: flex;" >
-                    <div class="pt-3 pr-2 pl-2 mr-4" style="width: 450px;">
-                    <h5 class="mb-4"><strong>Ingredients:</strong></h5>
-                      {% for ingredient in recipe.ingredients %}
-                        <li style="list-style: none; text-indent: 4%; font-size: small;" class="mb-2">{{ ingredient }}</li>
-                      {% endfor %}
-                    </div>
-                    <div class="pt-3">
-                    <h5 class="mb-4"><strong>Method:</strong></h5>
-                      {% for step in recipe.steps %}
-                        <li style="list-style:decimal; font-size: small;" class="mb-2">{{ step }}</li>
-                      {% endfor %}
-                    </div>
-                  </div>
-                </div>
+        <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordion">
+          <div class="card-body">
+            <div class="container mb-3 px-2" style="display: flex;" >
+              <div class="pt-3 pr-2 pl-2 mr-4" style="width: 60%;">
+              <h5 class="mb-4"><strong>Ingredients:</strong></h5>
+                <ul style="list-style: none;">
+                  {% for ingredient in recipe.ingredients %}
+                    <li style="text-indent: 4%; font-size: small;" class="mb-2">{{ ingredient }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="pt-3">
+              <h5 class="mb-4"><strong>Method:</strong></h5>
+                <ul style="list-style: none;">
+                  {% for step in recipe.steps %}
+                    <li style="font-size: small;" class="mb-2">{{ step }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
+          </div>
+        </div>
+        
 
-          {% endfor %}
-        </div>
+      {% endfor %}
     </div>
+  </div>
 </section>
+
 <hr class="mt-5">
+
 <section class="page-section bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-9 mx-auto">
-                <div class="text-center">
-                    <h2 class="section-heading mb-4">OUR PROMISE TO YOU</h2>
-                    <p class="px-5"><em>When you visit our website, we are dedicated to providing you with
-                        great recipes, which include the highest quality ingredients. If you are not sure with any
-                        recipe, please let us know and we will do everything we can to help you out!</em></p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="text-center">
+            <h2 class="section-heading mb-4">OUR PROMISE TO YOU</h2>
+            <p class="px-5"><em>When you visit our website, we are dedicated to providing you with
+                great recipes, which include the highest quality ingredients. If you are not sure with any
+                recipe, please let us know and we will do everything we can to help you out!</em></p>
         </div>
+      </div>
     </div>
+  </div>
 </section>
+
 <hr>
 
 {% endblock %}

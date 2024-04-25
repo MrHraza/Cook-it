@@ -22,9 +22,9 @@
                     {% endif %}
                 {% endwith %}
                 
-                <p>
+                <h6>
                     Your edited comment will be posted to our community page.
-                </p>
+                </h6>
 
                 <form action="{{ url_for('edit_comment', comment_id=comment.id) }}" method="post">
                     <textarea name="new_comment_text" placeholder="Leave your comment here" rows="10" cols="100">{{ comment.text }}</textarea>

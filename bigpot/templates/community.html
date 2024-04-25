@@ -23,9 +23,9 @@
                     {% endif %}
                 {% endwith %}
                 
-                <p>
+                <h6>
                     Welcome to our community page. Share your opinion on any receipe...
-                </p>
+                </h6>
 
                 <form action="{{ url_for('add_comment') }}" method="post">
                     <textarea class="mt-3 mb-3" id="comment" name="comment" cols="100" rows="10" placeholder="Leave your comment here" required></textarea>
@@ -45,7 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 class="mb-5">Comments:</h2>
+                <h4 class="mb-5">Comments:</h4>
                 <ul style="list-style: none;">
 
                     {% for comment in comments %} 
