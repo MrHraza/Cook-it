@@ -313,6 +313,10 @@ Commits were made throughout the development process to ensure that changes were
 
 GitHub was used as the remote repository for storing the project's code and resources. It provided a backup of the project and allowed it to be accessed from different locations.
 
+#### Contributors
+
+There are two contributors to this project. The primary contributor is myself, who developed all of the project. The second contributor is my mentor from Bristol, Ben Smith, who created a separate branch and committed code there as an **example** for the login process. This branch was not merged into the main library, but served as a valuable learning resource during the development process. 
+
 <br>
 
 ## Testing
