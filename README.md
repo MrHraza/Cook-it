@@ -319,13 +319,125 @@ GitHub was used as the remote repository for storing the project's code and reso
 
 ### Validation html 
 
-- 
+- Homepage
+
+![homepagehtmltest](bigpot/static/images/homepagehtmltest.png)
+
+- About page
+
+![Aboutus](bigpot/static/images/abouthtmltest.png)
+
+- Contact page
+
+![Contactus](bigpot/static/images/contacthtmltest.png)
+
+- Community page
+
+![community](bigpot/static/images/communityhtmltest.png)
+
+- Login page
+
+![login](bigpot/static/images/loginhtmltest.png)
+
+- Sign up page
+
+![signup](bigpot/static/images/signuphtmltest.png)
+
 
 ### Validation css
 
 - cookit.css
 
 ![css validation](bigpot/static/images/cookitcssvalid.png)
+
+### Validation python
+
+- __init__.py
+
+![init.py](bigpot/static/images/initvalid.png)
+
+- Models.py
+
+![Models.py](bigpot/static/images/modelsvalid.png)
+
+- routes.py
+
+![routes.py](bigpot/static/images/routesvalid.png)
+
+- run.py
+
+![run.py](bigpot/static/images/runvalid.png)
+
+<br>
+
+### Manual testing
+
+- User created successfully
+
+![User created](bigpot/static/images/usercreated.png)
+
+- User not found
+
+![User not found](bigpot/static/images/usernotfound.png)
+
+- User exists, incorrect password
+
+![incorrect password](bigpot/static/images/incorrectpassword.png)
+
+- Attempt to add a comment without logging in.
+
+![add comment](bigpot/static/images/addcomment.png)
+
+- Delete comment
+
+![delete comment](bigpot/static/images/deletecomment.png)
+
+- Edit comment
+
+![edit comment](bigpot/static/images/editcomment.png)
+
+<br>
+
+- Other general testing
+
+
+<br>
+
+**Desktop**
+
+| Aspect        | Result         | Comment  |
+| ------------- |:-------------:| -----:|
+| Webpages load | Yes |  |
+| Layout appearances are correct | Yes |  |
+| Scroll works | Yes |  |
+| Logo link works | Yes |  |
+| All menu links work | Yes |  |
+| Hover features work | Yes |  |
+| Buttons work | Yes |  |
+| Forms work | Yes |  |
+| Footer links work | Yes |  |
+| Login/Logout function works |  Yes  |    |
+| comment section works | Yes | |
+
+<br>
+
+**Mobile**
+
+| Aspect        | Result         | Comment  |
+| ------------- |:-------------:| :----- |
+| Webpages load | Yes |  |
+| Layout appearances are correct | No | On small devices layout could be better ie. *index page* |
+| Scroll works | Yes |  |
+| Logo link works | Yes |  |
+| All menu links work | Yes |  |
+| Hover features work | Yes |  |
+| Buttons work | Yes |  |
+| Forms work | Yes |  |
+| comment section works | Yes | |
+| Footer links work | Yes |  |
+| Login/Logout function works |  Yes  |    |
+
+<br>
 
 
 ## Accessibility Testing
@@ -435,7 +547,7 @@ GitHub was used as the remote repository for storing the project's code and reso
 - Flask
 - SQLAlchemy
 - Jinja
-- python
+- Python
 - JS 
 - Markdown
 
@@ -484,7 +596,7 @@ GitHub was used as the remote repository for storing the project's code and reso
 2. Open heroku, and create a new app.
 3. Navigate to the 'settings', finding 'Config vars'. Here add your configuration information. see example below.
 
-**NOTE: THE INFORMATION DISPLAYED IN THE IMAGE BELOW IS AN EXAMPLE AND NOT CORRECT**
+**NOTE: THE INFORMATION DISPLAYED IN THE IMAGE BELOW IS FOR EXAMPLE PURPOSES**
 
 ![config vars](bigpot/static/images/configvars.png)
 
